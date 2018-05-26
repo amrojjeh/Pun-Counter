@@ -1,0 +1,16 @@
+{
+    "total_puns": 3,
+    "puns": [
+    {
+    	"author": "Dinglydo",
+    	"pun": "This is a great pun"
+	},
+	{
+		"author": "Some stupid guy",
+		"pun": "Even stupider pun, not even worth typing"
+	},
+	{
+		"author": "Dinglydo",
+		"pun": "JUST AN AMAZING PUN"
+	}]
+}
