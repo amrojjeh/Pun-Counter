@@ -14,10 +14,17 @@ class PunsList:
 		else:
 			self.savePuns()
 
-	def punMade(self, pun):
-		pass
-	def badPun(self, pun):
-		pass
+	def punMade(self, author, pun):
+		self.data["total_puns"] += 1
+		self.data["puns"].append({"author": author, "pun": pun})
+		self.savePuns()
+
+	def badPun(self, index):
+		"""Removes a pun via index"""
+		self.data["total_puns"] -= 1
+		removedPun = self.data["puns"].pop(index)
+		self.savePuns()
+		return removedPun
 
 	def loadPuns(self):
 		with open(self.punsLocation, "r") as punsFile:
@@ -41,19 +48,22 @@ class PunsList:
 				yield pun["pun"]
 
 	def getPunByIndex(self, index):
-		pass
+		pun = self.data["puns"][index]
+		return pun
 
-	def getPunsByContent(self, search):
-		pass
+	def getPunsByContent(self, content):
+		for pun in self.data["puns"]:
+			startingIndex = pun["pun"].find(content)
+			if startingIndex == -1:
+				continue
+			yield pun
 
 	def getTotalPunsByAuthor(self, author):
 		return len(list(self.getPunsByAuthor(author)))
 
 def main():
 	goodPuns = PunsList("Puns.json")
-	print("Total puns : {}".format(goodPuns.getTotalPuns()))
-	print("Puns by Dinglydo : {}".format(list(goodPuns.getPunsByAuthor("Dinglydo"))))
-	print("Total puns by Dinglydo : {}".format(goodPuns.getTotalPunsByAuthor("Dinglydo")))
+	goodPuns.punMade("DinglyMate", "Better than your mom")
 
 if __name__ == "__main__":
 	main()

@@ -1,16 +1,21 @@
 {
-    "total_puns": 3,
+    "total_puns": 4,
     "puns": [
-    {
-    	"author": "Dinglydo",
-    	"pun": "This is a great pun"
-	},
-	{
-		"author": "Some stupid guy",
-		"pun": "Even stupider pun, not even worth typing"
-	},
-	{
-		"author": "Dinglydo",
-		"pun": "JUST AN AMAZING PUN"
-	}]
+        {
+            "author": "Dinglydo",
+            "pun": "This is a great pun"
+        },
+        {
+            "author": "Dinglydo",
+            "pun": "JUST AN AMAZING PUN"
+        },
+        {
+            "author": "A bad guy",
+            "pun": "Very bad"
+        },
+        {
+            "author": "DinglyMate",
+            "pun": "Better than your mom"
+        }
+    ]
 }
