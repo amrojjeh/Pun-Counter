@@ -34,8 +34,8 @@ class PunsList:
 		with open(self.punsLocation, "w") as punsFile:
 			json.dump(self.data, punsFile, indent=4)
 
-	def getData(self):
-		return self.data
+	def getPuns(self):
+		return self.data['puns']
 
 	def getTotalPuns(self):
 		return self.data["total_puns"]

@@ -3,11 +3,14 @@ It counts all dem puns
 
 
 ## How to make me bot run on de script?
-- Wait for the feature to come out
 - Add a token.txt
 - Add the bot token in the token.txt
-- Run the main python file when the main python file comes out, which is not now
+- Run the Main.py file
 
 
 ## Happy....
 It's happy punning :)))
+
+
+## Possible future plans
+- If a person makes two puns a day, then he shall get the master pun role
