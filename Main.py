@@ -23,7 +23,7 @@ async def on_message(message):
 		pun = ""
 		for word in message.content.split():
 			if word.upper() == "PUNMADE!":
-				pun = pun[0:-1]
+				pun = pun.strip()
 				break
 			pun += "{} ".format(word)
 		if pun.strip() == "":
