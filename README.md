@@ -1,4 +1,6 @@
 # Pun-Counter
+**THIS BOT NO LONGER WORKS DUE TO CHANGES IN THE API**
+
 It counts all dem puns
 
 
